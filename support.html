@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Plume.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+    :root {
+      --cream: #F7F3EE;
+      --sand: #E8E2D8;
+      --ink: #1C1C1A;
+      --charcoal: #5F5E5A;
+      --muted: #888780;
+      --faint: #B4B2A9;
+      --border: #D3CFC6;
+      --terracotta: #C97B5B;
+      --terracotta-light: #F0E4DA;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wordmark {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--terracotta); }
+
+    .doc-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding-bottom: 6rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+      max-width: 480px;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--terracotta-light);
+      border: 1px solid #E0CBBF;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-card-text .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-card-text p {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin: 0;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.15s;
+    }
+
+    .contact-btn:hover { opacity: 0.85; text-decoration: none; }
+
+    /* Section label */
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 0.5rem;
+      margin-top: 2.5rem;
+    }
+
+    /* FAQ accordion */
+    .faq-group {
+      border-top: 1px solid var(--border);
+    }
+
+    details {
+      border-bottom: 1px solid var(--border);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      font-size: 0.875rem;
+      color: var(--ink);
+      font-weight: 400;
+      user-select: none;
+      gap: 1rem;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary .chevron {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: var(--muted);
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary .chevron {
+      transform: rotate(180deg);
+    }
+
+    .answer {
+      font-size: 0.85rem;
+      color: var(--charcoal);
+      line-height: 1.75;
+      padding-bottom: 1.25rem;
+      padding-right: 1.5rem;
+    }
+
+    /* Links */
+    a {
+      color: var(--terracotta);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    footer {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--faint);
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--faint); }
+    footer a:hover { color: var(--terracotta); }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="wordmark" href="index.html">Plume<span>.</span></a>
+    <div class="doc-label">Support</div>
+  </header>
+
+  <main>
+    <h1>Support</h1>
+    <p class="intro">Find answers to common questions below. If you can't find what you're looking for, reach out and we'll get back to you.</p>
+
+    <div class="contact-card">
+      <div class="contact-card-text">
+        <div class="label">Get in touch</div>
+        <p>Questions, feedback, or something not working? We read every message.</p>
+      </div>
+      <a class="contact-btn" href="mailto:featherstudio@proton.me">Email us</a>
+    </div>
+
+    <!-- Getting started -->
+    <div class="section-label">Getting started</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How do I add a book?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Tap the + button on the Library screen. You can search by title or author, scan the ISBN barcode, or add a book manually. Once found, choose a shelf, set your start date, and you're done.</p>
+      </details>
+      <details>
+        <summary>
+          What are shelves?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Shelves let you organise your library. <strong>Reading</strong> is for books you're currently reading, <strong>Finished</strong> for completed ones, <strong>Want to read</strong> for your to-read list, and <strong>Did not finish</strong> for books you abandoned.</p>
+      </details>
+      <details>
+        <summary>
+          How do I track my reading progress?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Open a book, go to the Info tab, and tap the page count to update your current page. Plume logs your daily reading and uses it to calculate streaks and stats.</p>
+      </details>
+    </div>
+
+    <!-- Highlights -->
+    <div class="section-label">Highlights</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How do I add a highlight?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Open a book and go to the Highlights tab. Tap + Add highlight to type one manually, scan a page with your camera using OCR, or import from your e-reader.</p>
+      </details>
+      <details>
+        <summary>
+          How do I scan a highlight from a physical book?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">In the Highlights tab, tap + Add highlight then choose Scan page. Point your camera at the text, and Plume will extract it automatically using on-device OCR. You can edit the result before saving.</p>
+      </details>
+      <details>
+        <summary>
+          Can I add a note to a highlight?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Open any highlight to edit it. There's a Your note section below the quote where you can write your thoughts. Notes are saved instantly.</p>
+      </details>
+    </div>
+
+    <!-- Importing from e-readers -->
+    <div class="section-label">Importing from e-readers</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How do I export my highlights from Kindle?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Connect your Kindle to your Mac or PC via USB. Open it in Finder or File Explorer and look for the documents folder. Inside you'll find a file called <strong>My Clippings.txt</strong>. Copy it to your iPhone — via AirDrop, email, or Files — then open Plume, go to Profile → Import highlights, choose Kindle, and select the file.</p>
+      </details>
+      <details>
+        <summary>
+          How do I export my highlights from Kobo?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">First, enable the export feature on your Kobo. Connect it to your Mac or PC via USB. On Mac, show hidden files with <strong>Cmd + Shift + .</strong> (period). Find the file at <strong>.kobo/Kobo/Kobo eReader.conf</strong> and open it in a text editor. Before the <code>[General]</code> section at the top, add two lines: <code>[FeatureSettings]</code> on one line and <code>ExportHighlights=true</code> on the next. Save, eject, and restart your Kobo. A new Export highlights option will appear when you press and hold on a book. Export each book individually — files are saved in the Exported Annotations folder at the root of your Kobo. Send the .txt files to your iPhone and import in Plume via Profile → Import highlights → Kobo.</p>
+      </details>
+      <details>
+        <summary>
+          What happens if a book already exists when I import?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Plume will detect the match and ask what to do. <strong>Merge</strong> adds the new highlights to the existing book. <strong>Replace</strong> overwrites the existing highlights. <strong>Add as new</strong> creates a separate entry.</p>
+      </details>
+    </div>
+
+    <!-- Notes -->
+    <div class="section-label">Notes</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          What is the Notes tab on a book?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">The Notes tab lets you write freeform thoughts about a book — things that don't belong on a specific quote. Think of it as a reading journal per book. Tap + Add note to create an entry. Notes are timestamped and saved automatically.</p>
+      </details>
+      <details>
+        <summary>
+          What's the difference between a highlight note and a book note?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">A highlight note is a reaction tied to a specific quote. A book note is a standalone thought not linked to any passage — for broader reflections, questions, or ideas the book sparked.</p>
+      </details>
+    </div>
+
+    <!-- Reflections -->
+    <div class="section-label">Reflections</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          What are Reflections?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Reflections surface a past highlight from your library every week — a quiet moment to revisit something you found worth saving. When a reflection is ready, a subtle pill appears at the bottom of your Library. Tap it to read.</p>
+      </details>
+      <details>
+        <summary>
+          How does Plume choose which highlight to show?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Plume favours older highlights you haven't seen recently, so Reflections feel like rediscovery rather than repetition. The same highlight won't appear twice within six months.</p>
+      </details>
+      <details>
+        <summary>
+          Can I turn Reflections off?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Go to Profile → Settings and toggle Reflections off.</p>
+      </details>
+    </div>
+
+    <!-- Stats -->
+    <div class="section-label">Stats</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How are my reading stats calculated?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Stats are based on your reading log — updated each time you record page progress on a book. Books read, pages read, and streaks all come from this log, so keeping your progress updated gives you more accurate stats.</p>
+      </details>
+      <details>
+        <summary>
+          What is a reading streak?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">A streak counts consecutive days where you met your daily page goal. Your current streak and best streak are shown on the Stats page.</p>
+      </details>
+      <details>
+        <summary>
+          How do I set a daily reading goal?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">On the Stats page, tap Edit next to Today's goal. Set your target number of pages per day. Plume tracks whether you hit it each day.</p>
+      </details>
+    </div>
+
+    <!-- iCloud sync -->
+    <div class="section-label">iCloud sync</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How does iCloud sync work?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">When enabled, Plume syncs your library, highlights, notes, reads, and reading log to your private iCloud container. Your data is only visible to you — Plume never has access to it. Sync happens automatically when you open the app.</p>
+      </details>
+      <details>
+        <summary>
+          How do I enable iCloud sync?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Go to Profile → Settings and toggle iCloud sync on. Make sure you're signed into iCloud on your device. The first sync may take a moment depending on library size.</p>
+      </details>
+      <details>
+        <summary>
+          Is my data private?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Everything stays on your device or in your private iCloud container. Plume has no backend servers and no access to your data. No tracking, no ads, no third-party sharing.</p>
+      </details>
+    </div>
+
+    <!-- Data & backup -->
+    <div class="section-label">Data &amp; backup</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How do I back up my data?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Go to Profile → App data → Export backup. Plume creates a JSON file containing your entire library, highlights, and reading history. Save it somewhere safe — Files, iCloud Drive, or email it to yourself.</p>
+      </details>
+      <details>
+        <summary>
+          How do I restore from a backup?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Go to Profile → App data → Import backup and select your backup file. Plume will restore all your books, highlights, and reading history.</p>
+      </details>
+      <details>
+        <summary>
+          What happens if I delete all data?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Profile → App data → Delete all data permanently removes everything from your device and returns you to onboarding. This cannot be undone. If you have a backup or iCloud sync enabled, you can restore afterwards.</p>
+      </details>
+    </div>
+
+    <!-- Plume Pro -->
+    <div class="section-label">Plume Pro</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          What does Plume Pro include?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Pro unlocks unlimited Kindle and Kobo imports, iCloud sync, full stats history across all years and months, daily goal editing, and unlimited Reflections after the first. It's a one-time purchase — no subscription.</p>
+      </details>
+      <details>
+        <summary>
+          How do I restore a previous purchase?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">If you've previously purchased Plume Pro and reinstalled the app, open the paywall and tap Restore purchase. Your Pro access will be reinstated at no charge.</p>
+      </details>
+    </div>
+
+  </main>
+
+  <footer>
+    Plume. — made with care &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+</body>
+</html>

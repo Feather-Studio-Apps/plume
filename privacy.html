@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Plume.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+    :root {
+      --cream: #F7F3EE;
+      --sand: #E8E2D8;
+      --ink: #1C1C1A;
+      --charcoal: #5F5E5A;
+      --muted: #888780;
+      --faint: #B4B2A9;
+      --border: #D3CFC6;
+      --terracotta: #C97B5B;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wordmark {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--terracotta); }
+
+    .doc-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding-bottom: 6rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .effective {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      color: var(--terracotta);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    footer {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--faint);
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--faint); }
+    footer a:hover { color: var(--terracotta); }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="wordmark" href="index.html">Plume<span>.</span></a>
+    <div class="doc-label">Legal</div>
+  </header>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="effective">Effective date: May 21, 2026</p>
+
+    <p>Plume is a reading companion app built for people who take their reading seriously. Your privacy is fundamental to what we believe — your reading life is personal, and we treat it that way.</p>
+
+    <h2>What we collect</h2>
+    <p>Plume collects only what is necessary to provide the app experience:</p>
+    <ul>
+      <li><strong>Your library data</strong> — books, highlights, notes, reading dates, and ratings you add. This is stored locally on your device using IndexedDB.</li>
+      <li><strong>Your name</strong> — optionally provided during onboarding. Stored locally only, never transmitted to us.</li>
+      <li><strong>iCloud sync data</strong> — if you enable iCloud sync, your library data is synced through your personal iCloud account via Apple's CloudKit. We never see this data.</li>
+    </ul>
+
+    <h2>What we do not collect</h2>
+    <ul>
+      <li>We do not collect email addresses or create user accounts.</li>
+      <li>We do not use analytics or tracking SDKs of any kind.</li>
+      <li>We do not sell or share your data with third parties.</li>
+      <li>We do not collect device identifiers, location data, or usage telemetry.</li>
+    </ul>
+
+    <h2>Third-party services</h2>
+    <p>Plume uses the following third-party services to provide certain features:</p>
+    <ul>
+      <li><strong>Google Books API</strong> — used to search for book metadata (title, author, cover, synopsis). Queries are sent to our Cloudflare Worker which caches results. No personal data is included in these requests.</li>
+      <li><strong>AniList / MangaDex</strong> — used to search for manga metadata. Same approach as Google Books — no personal data included.</li>
+      <li><strong>Apple CloudKit</strong> — used for optional iCloud sync. Your data stays in your personal iCloud account and is accessible only to you.</li>
+      <li><strong>RevenueCat</strong> — used to process the one-time Plume Pro purchase through Apple's App Store. RevenueCat's privacy policy applies to purchase transactions. We receive only confirmation of purchase status.</li>
+    </ul>
+
+    <h2>Data storage</h2>
+    <p>All your reading data is stored locally on your device. If you enable iCloud sync, a copy is stored in your personal iCloud account — accessible only to you. We have no servers and no access to your data.</p>
+
+    <h2>Data deletion</h2>
+    <p>You can delete all your Plume data at any time from Profile → App data → Delete all data. This permanently removes all books, highlights, notes, and reading history from your device.</p>
+
+    <h2>Children</h2>
+    <p>Plume is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we make changes to this privacy policy, we will update the effective date above. Continued use of Plume after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy? Reach us at <a href="mailto:featherstudio@proton.me">featherstudio@proton.me</a>.</p>
+
+    <hr class="divider" />
+  </main>
+
+  <footer>
+    Plume. — made with care &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+    <a href="support.html">Support</a>
+  </footer>
+</body>
+</html>
