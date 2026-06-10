@@ -79,7 +79,6 @@
       max-width: 480px;
     }
 
-    /* Contact card */
     .contact-card {
       background: var(--terracotta-light);
       border: 1px solid #E0CBBF;
@@ -123,7 +122,6 @@
 
     .contact-btn:hover { opacity: 0.85; text-decoration: none; }
 
-    /* Section label */
     .section-label {
       font-size: 0.65rem;
       letter-spacing: 0.15em;
@@ -133,7 +131,6 @@
       margin-top: 2.5rem;
     }
 
-    /* FAQ accordion */
     .faq-group {
       border-top: 1px solid var(--border);
     }
@@ -178,7 +175,6 @@
       padding-right: 1.5rem;
     }
 
-    /* Links */
     a {
       color: var(--terracotta);
       text-decoration: none;
@@ -226,7 +222,7 @@
           How do I add a book?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Tap the + button on the Library screen. You can search by title or author, scan the ISBN barcode, or add a book manually. Once found, choose a shelf, set your start date, and you're done.</p>
+        <p class="answer">Tap the + button on the Library screen. You can search by title or author, scan the ISBN barcode, or add a book manually. Once found, choose a shelf and you're done.</p>
       </details>
       <details>
         <summary>
@@ -240,7 +236,47 @@
           How do I track my reading progress?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Open a book, go to the Info tab, and tap the page count to update your current page. Plume logs your daily reading and uses it to calculate streaks and stats.</p>
+        <p class="answer">Open a book, go to the Info tab, and tap the page or chapter count to update your progress. You can also tap the progress bar label directly. Plume. logs your daily reading and uses it to calculate streaks and stats.</p>
+      </details>
+      <details>
+        <summary>
+          How do I change a book's status or dates without going into edit mode?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Tap the shelf badge (e.g. Reading) on the book detail page to change status directly. Tap the Started or Finished rows in the Info tab to update dates. Tap the Pages or Chapters value to edit the total.</p>
+      </details>
+      <details>
+        <summary>
+          What is the Ongoing series toggle for manga?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">For manga without a known chapter count, you can toggle <strong>Ongoing series</strong> in the Info tab. This prevents Plume. from automatically marking the manga as finished when you reach the current chapter total. You can also find this toggle in edit mode for any manga.</p>
+      </details>
+      <details>
+        <summary>
+          What is Refresh metadata?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">If a book is missing its cover, synopsis, pages, or other details, a <strong>Refresh metadata</strong> button appears in the Info tab. Tapping it fetches the latest information from Google Books and fills in any missing fields. The cover is always updated to match. You can refresh once every 24 hours per book.</p>
+      </details>
+    </div>
+
+    <!-- Library view -->
+    <div class="section-label">Library view</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          Can I change how books are displayed?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Tap the filter icon on the Library screen and go to the <strong>Display</strong> tab. You can switch between grid and list view, choose how many covers appear per row (2–5), and toggle the visibility of title, author, rating, and reading progress on each cover.</p>
+      </details>
+      <details>
+        <summary>
+          How do I sort or filter my library?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Tap the filter icon on the Library screen. The <strong>Sort</strong> tab lets you order by recently added, title, author, rating, or date finished. The <strong>Filter</strong> tab lets you narrow by type, genre, rating, or year read.</p>
       </details>
     </div>
 
@@ -252,21 +288,35 @@
           How do I add a highlight?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Open a book and go to the Highlights tab. Tap + Add highlight to type one manually, scan a page with your camera using OCR, or import from your e-reader.</p>
+        <p class="answer">Open a book and go to the Highlights tab. Tap <strong>+ Add highlight</strong> in the footer to type one manually, scan a page with your camera using OCR, or import from your e-reader.</p>
       </details>
       <details>
         <summary>
           How do I scan a highlight from a physical book?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">In the Highlights tab, tap + Add highlight then choose Scan page. Point your camera at the text, and Plume will extract it automatically using on-device OCR. You can edit the result before saving.</p>
+        <p class="answer">In the Highlights tab, tap + Add highlight then choose <strong>Scan page</strong>. Point your camera at the text, and Plume. will extract it automatically using on-device OCR. You can edit the result before saving.</p>
       </details>
       <details>
         <summary>
           Can I add a note to a highlight?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Yes. Open any highlight to edit it. There's a Your note section below the quote where you can write your thoughts. Notes are saved instantly.</p>
+        <p class="answer">Yes. Open any highlight to edit it. There's a <strong>Your note</strong> section below the quote where you can write your thoughts. Tap Done to save.</p>
+      </details>
+      <details>
+        <summary>
+          Can I search my highlights?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Tap the search icon in the Highlights tab footer to search within a book's highlights by quote text or note content. To search across your entire library, use the search bar on the main Library screen.</p>
+      </details>
+      <details>
+        <summary>
+          What is the Discover button in Highlights?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Once you have 20 or more highlights for a book, a sparkle icon appears in the Highlights tab footer. Tap it to jump to a random highlight — a way to rediscover something you saved.</p>
       </details>
     </div>
 
@@ -278,21 +328,21 @@
           How do I export my highlights from Kindle?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Connect your Kindle to your Mac or PC via USB. Open it in Finder or File Explorer and look for the documents folder. Inside you'll find a file called <strong>My Clippings.txt</strong>. Copy it to your iPhone — via AirDrop, email, or Files — then open Plume, go to Profile → Import highlights, choose Kindle, and select the file.</p>
+        <p class="answer">Connect your Kindle to your Mac or PC via USB. Open it in Finder or File Explorer and look for the documents folder. Inside you'll find a file called <strong>My Clippings.txt</strong>. Copy it to your iPhone — via AirDrop, email, or Files — then open Plume., go to Profile → Import highlights, choose Kindle, and select the file.</p>
       </details>
       <details>
         <summary>
           How do I export my highlights from Kobo?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">First, enable the export feature on your Kobo. Connect it to your Mac or PC via USB. On Mac, show hidden files with <strong>Cmd + Shift + .</strong> (period). Find the file at <strong>.kobo/Kobo/Kobo eReader.conf</strong> and open it in a text editor. Before the <code>[General]</code> section at the top, add two lines: <code>[FeatureSettings]</code> on one line and <code>ExportHighlights=true</code> on the next. Save, eject, and restart your Kobo. A new Export highlights option will appear when you press and hold on a book. Export each book individually — files are saved in the Exported Annotations folder at the root of your Kobo. Send the .txt files to your iPhone and import in Plume via Profile → Import highlights → Kobo.</p>
+        <p class="answer">First, enable the export feature on your Kobo. Connect it to your Mac or PC via USB. On Mac, show hidden files with <strong>Cmd + Shift + .</strong> (period). Find the file at <strong>.kobo/Kobo/Kobo eReader.conf</strong> and open it in a text editor. Before the <code>[General]</code> section at the top, add two lines: <code>[FeatureSettings]</code> on one line and <code>ExportHighlights=true</code> on the next. Save, eject, and restart your Kobo. A new Export highlights option will appear when you press and hold on a book. Export each book individually — files are saved in the Exported Annotations folder at the root of your Kobo. Send the .txt files to your iPhone and import in Plume. via Profile → Import highlights → Kobo.</p>
       </details>
       <details>
         <summary>
           What happens if a book already exists when I import?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Plume will detect the match and ask what to do. <strong>Merge</strong> adds the new highlights to the existing book. <strong>Replace</strong> overwrites the existing highlights. <strong>Add as new</strong> creates a separate entry.</p>
+        <p class="answer">Plume. will detect the match and ask what to do. <strong>Merge</strong> adds the new highlights to the existing book. <strong>Replace</strong> overwrites the existing highlights. <strong>Add as new</strong> creates a separate entry.</p>
       </details>
     </div>
 
@@ -304,7 +354,7 @@
           What is the Notes tab on a book?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">The Notes tab lets you write freeform thoughts about a book — things that don't belong on a specific quote. Think of it as a reading journal per book. Tap + Add note to create an entry. Notes are timestamped and saved automatically.</p>
+        <p class="answer">The Notes tab lets you write freeform thoughts about a book — things that don't belong on a specific quote. Think of it as a reading journal per book. Tap <strong>+ Add note</strong> in the footer to create an entry. Notes are timestamped and saved automatically.</p>
       </details>
       <details>
         <summary>
@@ -312,6 +362,13 @@
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <p class="answer">A highlight note is a reaction tied to a specific quote. A book note is a standalone thought not linked to any passage — for broader reflections, questions, or ideas the book sparked.</p>
+      </details>
+      <details>
+        <summary>
+          Can I search my notes?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Tap the search icon in the Notes tab footer to search within a book's notes.</p>
       </details>
     </div>
 
@@ -323,14 +380,21 @@
           What are Reflections?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Reflections surface a past highlight from your library every week — a quiet moment to revisit something you found worth saving. When a reflection is ready, a subtle pill appears at the bottom of your Library. Tap it to read.</p>
+        <p class="answer">Reflections surface a past highlight from your library — a quiet moment to revisit something you found worth saving. When a reflection is ready, a subtle pill appears at the bottom of your Library. Tap it to read.</p>
       </details>
       <details>
         <summary>
-          How does Plume choose which highlight to show?
+          How often do Reflections appear?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Plume favours older highlights you haven't seen recently, so Reflections feel like rediscovery rather than repetition. The same highlight won't appear twice within six months.</p>
+        <p class="answer">You can choose the frequency in Profile → Settings → <strong>Reflection frequency</strong>. Options are Daily, Weekly, Bi-weekly, and Monthly. Reflections appear when you open the app after the interval has passed. Changing the frequency resets the timer so a new one can surface on your next app open.</p>
+      </details>
+      <details>
+        <summary>
+          How does Plume. choose which highlight to show?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Plume. favours older highlights you haven't seen recently, so Reflections feel like rediscovery rather than repetition. The same highlight won't appear twice within six months.</p>
       </details>
       <details>
         <summary>
@@ -363,7 +427,7 @@
           How do I set a daily reading goal?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">On the Stats page, tap Edit next to Today's goal. Set your target number of pages per day. Plume tracks whether you hit it each day.</p>
+        <p class="answer">On the Stats page, tap <strong>Edit</strong> next to Today's goal. Set your target number of pages per day. Plume. tracks whether you hit it each day.</p>
       </details>
     </div>
 
@@ -375,7 +439,7 @@
           How does iCloud sync work?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">When enabled, Plume syncs your library, highlights, notes, reads, and reading log to your private iCloud container. Your data is only visible to you — Plume never has access to it. Sync happens automatically when you open the app.</p>
+        <p class="answer">When enabled, Plume. syncs your library, highlights, notes, reads, and reading log to your private iCloud container. Your data is only visible to you — Plume. never has access to it. Sync happens automatically when you open the app.</p>
       </details>
       <details>
         <summary>
@@ -389,7 +453,7 @@
           Is my data private?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Yes. Everything stays on your device or in your private iCloud container. Plume has no backend servers and no access to your data. No tracking, no ads, no third-party sharing.</p>
+        <p class="answer">Yes. Everything stays on your device or in your private iCloud container. Plume. has no backend servers and no access to your data. No tracking, no ads, no third-party sharing.</p>
       </details>
     </div>
 
@@ -401,14 +465,14 @@
           How do I back up my data?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Go to Profile → App data → Export backup. Plume creates a JSON file containing your entire library, highlights, and reading history. Save it somewhere safe — Files, iCloud Drive, or email it to yourself.</p>
+        <p class="answer">Go to Profile → App data → Export backup. Plume. creates a JSON file containing your entire library, highlights, and reading history. Save it somewhere safe — Files, iCloud Drive, or email it to yourself.</p>
       </details>
       <details>
         <summary>
           How do I restore from a backup?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Go to Profile → App data → Import backup and select your backup file. Plume will restore all your books, highlights, and reading history.</p>
+        <p class="answer">Go to Profile → App data → Import backup and select your backup file. Plume. will restore all your books, highlights, and reading history.</p>
       </details>
       <details>
         <summary>
