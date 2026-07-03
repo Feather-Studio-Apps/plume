@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plume — Your reading life, beautifully kept.</title>
+  <meta name="description" content="Track your books, save highlights, and reflect on what you've read. Plume is a personal reading companion for iOS." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+
+    :root {
+      --cream: #F7F3EE;
+      --sand: #E8E2D8;
+      --ink: #1C1C1A;
+      --charcoal: #5F5E5A;
+      --muted: #888780;
+      --faint: #B4B2A9;
+      --border: #D3CFC6;
+      --terracotta: #C97B5B;
+      --terracotta-light: #F0E4DA;
+      --terracotta-dim: #A8623E;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--terracotta); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── NAV ── */
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--terracotta); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+
+    .nav-cta {
+      background: var(--ink) !important;
+      color: var(--cream) !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+      transition: opacity 0.15s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.8; }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-text { }
+
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-headline {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      line-height: 1.75;
+      max-width: 380px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--terracotta);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-dim);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn-primary svg { width: 18px; height: 18px; fill: #fff; }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: var(--faint);
+    }
+
+    /* Hero mockup */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .screenshot-duo {
+      position: relative;
+      width: 300px;
+      height: 480px;
+    }
+
+    .screenshot-duo .screen {
+      position: absolute;
+      width: 210px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow:
+        0 2px 4px rgba(28,28,26,0.06),
+        0 8px 24px rgba(28,28,26,0.12),
+        0 24px 48px rgba(28,28,26,0.08);
+    }
+
+    .screenshot-duo .screen img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .screenshot-duo .screen-back {
+      top: 32px;
+      left: 0;
+      z-index: 1;
+      transform: rotate(-3deg);
+      transform-origin: bottom left;
+    }
+
+    .screenshot-duo .screen-front {
+      top: 0;
+      right: 0;
+      z-index: 2;
+      transform: rotate(2deg);
+      transform-origin: bottom right;
+    }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .features-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .features-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 1rem;
+    }
+
+    .features-headline {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .features-headline em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--terracotta);
+      box-shadow: 0 4px 20px rgba(201, 123, 91, 0.08);
+    }
+
+    .feature-card.wide {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--terracotta-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .feature-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--terracotta);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-title {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-desc {
+      font-size: 0.85rem;
+      color: var(--charcoal);
+      line-height: 1.7;
+    }
+
+    /* wide card visual side */
+    .feature-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mock-highlight-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .mock-quote {
+      font-family: 'Lora', serif;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    .mock-source {
+      font-size: 0.65rem;
+      color: var(--faint);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .mock-source-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--faint);
+    }
+
+    /* ── PRIVACY STRIP ── */
+    .privacy-strip {
+      background: var(--sand);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .privacy-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .privacy-item { }
+
+    .privacy-icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 0.75rem;
+      background: var(--cream);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .privacy-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--terracotta);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .privacy-title {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .privacy-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── DOWNLOAD ── */
+    .download {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .download-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 1rem;
+    }
+
+    .download-headline {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .download-headline em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .download-sub {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .download-price {
+      font-size: 0.75rem;
+      color: var(--faint);
+      margin-bottom: 2.5rem;
+    }
+
+    .download-price strong {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .app-store-btn {
+      display: inline-block;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .app-store-btn:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .app-store-btn img {
+      height: 44px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-wordmark {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .footer-wordmark span { color: var(--terracotta); }
+
+    .footer-copy {
+      font-size: 0.7rem;
+      color: var(--faint);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.75rem;
+      color: var(--faint);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--terracotta); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+        gap: 3rem;
+      }
+
+      .hero-visual { order: -1; }
+
+      .screenshot-duo { width: 260px; height: 400px; }
+      .screenshot-duo .screen { width: 180px; }
+
+      .features-grid { grid-template-columns: 1fr; }
+
+      .feature-card.wide {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+      }
+
+      .privacy-strip-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="wordmark" href="#">Plume<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="https://apps.apple.com/app/id6761933498" class="nav-cta">Download</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">For iOS — Available on the App Store</p>
+      <h1 class="hero-headline">Your reading life,<br><em>beautifully kept.</em></h1>
+      <p class="hero-sub">Track every book. Save the highlights that matter. Rediscover what moved you. Plume is a personal reading companion built for people who take their books seriously.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://apps.apple.com/app/id6761933498">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download free
+        </a>
+        <span class="hero-note">One-time Pro unlock · No subscription</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="screenshot-duo">
+        <div class="screen screen-back">
+          <img src="plume_highlight.png" alt="Plume highlights screen" />
+        </div>
+        <div class="screen screen-front">
+          <img src="plume_shelf.png" alt="Plume library screen" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="features-header">
+      <p class="features-eyebrow">Everything in Plume</p>
+      <h2 class="features-headline">Built for the way<br><em>serious readers</em> actually read.</h2>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- Library -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="feature-label">Library</div>
+        <div class="feature-title">Every book, perfectly organised.</div>
+        <p class="feature-desc">Four shelves — Reading, Finished, Want to Read, Did Not Finish. Add by search, ISBN scan, or manually. Track dates, ratings, reviews, and progress for every title.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="feature-label">Stats</div>
+        <div class="feature-title">See your reading habit grow.</div>
+        <p class="feature-desc">Daily reading log, streaks, page goals, and a monthly calendar that shows exactly when you read. Set a daily page target and watch the habit form.</p>
+      </div>
+
+      <!-- Highlights — wide card -->
+      <div class="feature-card wide">
+        <div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          </div>
+          <div class="feature-label">Highlights</div>
+          <div class="feature-title">Every quote, from every book.</div>
+          <p class="feature-desc">Import from your Kindle clippings file or Kobo highlights in seconds. Scan a page from a physical book with your camera. Or type one in by hand. Every highlight lives alongside the book it came from.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="mock-highlight-card">
+            <p class="mock-quote">"All happy families are alike; each unhappy family is unhappy in its own way."</p>
+            <div class="mock-source">
+              <div class="mock-source-dot"></div>
+              Anna Karenina &nbsp;·&nbsp; Page 1 &nbsp;·&nbsp; Kindle
+            </div>
+          </div>
+          <div class="mock-highlight-card">
+            <p class="mock-quote">"The two most important days in your life are the day you are born and the day you find out why."</p>
+            <div class="mock-source">
+              <div class="mock-source-dot"></div>
+              Manual &nbsp;·&nbsp; Page 84
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflections -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="feature-label">Reflections</div>
+        <div class="feature-title">Rediscover what moved you.</div>
+        <p class="feature-desc">Once a week, Plume quietly surfaces a highlight you saved long ago. A passage you underlined, a sentence that stayed with you. A small ritual for the serious reader.</p>
+      </div>
+
+      <!-- Notes -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="feature-label">Notes</div>
+        <div class="feature-title">A reading journal per book.</div>
+        <p class="feature-desc">Write freeform thoughts alongside any book — ideas mid-read, questions to return to, things the book made you think about. Separate from highlights, always close at hand.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRIVACY STRIP -->
+  <div class="privacy-strip">
+    <div class="privacy-strip-inner">
+      <div class="privacy-item">
+        <div class="privacy-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="privacy-title">Local first</div>
+        <p class="privacy-desc">Your library lives on your device. No account required, ever.</p>
+      </div>
+      <div class="privacy-item">
+        <div class="privacy-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="privacy-title">Private by design</div>
+        <p class="privacy-desc">No tracking, no analytics, no ads. Your reading is your own.</p>
+      </div>
+      <div class="privacy-item">
+        <div class="privacy-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="privacy-title">iCloud sync</div>
+        <p class="privacy-desc">Optional sync across your devices. We never see your data.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOWNLOAD -->
+  <section class="download">
+    <p class="download-eyebrow">Available now on iOS</p>
+    <h2 class="download-headline">Start keeping your<br><em>reading life</em> today.</h2>
+    <p class="download-sub">Free to download. Unlock everything for a one-time purchase.</p>
+    <p class="download-price">No subscription, ever.</p>
+    <a class="app-store-btn" href="https://apps.apple.com/app/id6761933498">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a class="footer-wordmark" href="#">Plume<span>.</span></a>
+        <span class="footer-copy">© 2026 Feather Studio</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="mailto:featherstudio@proton.me">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
