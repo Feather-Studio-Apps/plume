@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — Plume.</title>
+  <title>Privacy Policy — Plume.</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
@@ -16,7 +16,6 @@
       --faint: #B4B2A9;
       --border: #D3CFC6;
       --terracotta: #C97B5B;
-      --terracotta-light: #F0E4DA;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -72,107 +71,36 @@
       letter-spacing: -0.02em;
     }
 
-    .intro {
-      font-size: 0.9rem;
-      color: var(--charcoal);
-      margin-bottom: 3rem;
-      max-width: 480px;
-    }
-
-    .contact-card {
-      background: var(--terracotta-light);
-      border: 1px solid #E0CBBF;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .contact-card-text .label {
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .effective {
+      font-size: 0.75rem;
       color: var(--muted);
-      margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 3rem;
     }
 
-    .contact-card-text p {
-      font-size: 0.9rem;
-      color: var(--charcoal);
-      margin: 0;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      background: var(--terracotta);
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.6rem 1.25rem;
-      border-radius: 8px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: opacity 0.15s;
-    }
-
-    .contact-btn:hover { opacity: 0.85; text-decoration: none; }
-
-    .section-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--faint);
-      margin-bottom: 0.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .faq-group {
-      border-top: 1px solid var(--border);
-    }
-
-    details {
-      border-bottom: 1px solid var(--border);
-    }
-
-    summary {
-      list-style: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 0;
-      font-size: 0.875rem;
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: var(--ink);
-      font-weight: 400;
-      user-select: none;
-      gap: 1rem;
+      margin: 2.5rem 0 0.75rem;
     }
 
-    summary::-webkit-details-marker { display: none; }
-
-    summary .chevron {
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-      color: var(--muted);
-      transition: transform 0.2s ease;
-    }
-
-    details[open] summary .chevron {
-      transform: rotate(180deg);
-    }
-
-    .answer {
-      font-size: 0.85rem;
+    p {
+      font-size: 0.9rem;
       color: var(--charcoal);
-      line-height: 1.75;
-      padding-bottom: 1.25rem;
-      padding-right: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin-bottom: 0.4rem;
     }
 
     a {
@@ -181,6 +109,12 @@
     }
 
     a:hover { text-decoration: underline; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
 
     footer {
       max-width: 640px;
@@ -199,580 +133,64 @@
 <body>
   <header>
     <a class="wordmark" href="index.html">Plume<span>.</span></a>
-    <div class="doc-label">Support</div>
+    <div class="doc-label">Legal</div>
   </header>
 
   <main>
-    <h1>Support</h1>
-    <p class="intro">Find answers to common questions below. If you can't find what you're looking for, reach out and we'll get back to you.</p>
+    <h1>Privacy Policy</h1>
+    <p class="effective">Effective date: September 7, 2026</p>
 
-    <div class="contact-card">
-      <div class="contact-card-text">
-        <div class="label">Get in touch</div>
-        <p>Questions, feedback, or something not working? We read every message.</p>
-      </div>
-      <a class="contact-btn" href="mailto:featherstudio@proton.me">Email us</a>
-    </div>
+    <p>Plume is a reading companion app built for people who take their reading seriously. Your privacy is fundamental to what we believe — your reading life is personal, and we treat it that way.</p>
 
-    <!-- Getting started -->
-    <div class="section-label">Getting started</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How do I add a book?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the + button on the Library screen. You can search by title or author, scan the ISBN barcode, or add a book manually. Once found, choose a shelf and you're done.</p>
-      </details>
-      <details>
-        <summary>
-          What are shelves?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Shelves let you organise your library. <strong>Reading</strong> is for books you're currently reading, <strong>Finished</strong> for completed ones, <strong>Want to read</strong> for your to-read list, and <strong>Did not finish</strong> for books you abandoned.</p>
-      </details>
-      <details>
-        <summary>
-          How do I track my reading progress?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Open a book, go to the Info tab, and tap the page or chapter count to update your progress. You can also tap the progress bar label directly. Plume. logs your daily reading and uses it to calculate streaks and stats.</p>
-      </details>
-      <details>
-        <summary>
-          How do I change a book's status or dates without going into edit mode?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the shelf badge (e.g. Reading) on the book detail page to change status directly. Tap the Started or Finished rows in the Info tab to update dates. Tap the Pages or Chapters value to edit the total.</p>
-      </details>
-      <details>
-        <summary>
-          What is the Ongoing series toggle for manga?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">For manga without a known chapter count, you can toggle <strong>Ongoing series</strong> in the Info tab. This prevents Plume. from automatically marking the manga as finished when you reach the current chapter total. You can also find this toggle in edit mode for any manga.</p>
-      </details>
-      <details>
-        <summary>
-          What is Refresh metadata?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">If a book is missing its cover, synopsis, pages, or other details, a <strong>Refresh metadata</strong> button appears in the Info tab. Tapping it fetches the latest information from Google Books and fills in any missing fields. The cover is always updated to match. You can refresh once every 24 hours per book.</p>
-      </details>
-      <details>
-        <summary>
-          What is the More by this author section?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">At the bottom of a book's Info tab, Plume. shows other books by the same author — a quiet way to discover what else they've written without leaving the app. Tap any cover to see details and add it to your library. This section only appears for books, not manga. Results come from Google Books, a free provider with broad but imperfect coverage — accuracy and availability vary by author, and some lesser-known authors may return no results or unrelated titles. This is a known limitation of free metadata sources.</p>
-      </details>
-    </div>
+    <h2>What we collect</h2>
+    <p>Plume collects only what is necessary to provide the app experience:</p>
+    <ul>
+      <li><strong>Your library data</strong> — books, highlights, notes, reading dates, and ratings you add. This is stored locally on your device using IndexedDB.</li>
+      <li><strong>Your name</strong> — optionally provided during onboarding. Stored locally only, never transmitted to us.</li>
+      <li><strong>iCloud sync data</strong> — if you enable iCloud sync, your library data is synced through your personal iCloud account via Apple's CloudKit. We never see this data.</li>
+    </ul>
 
-    <!-- Library view -->
-    <div class="section-label">Library view</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          Can I change how books are displayed?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Tap the filter icon on the Library screen and go to the <strong>Display</strong> tab. You can switch between grid and list view, choose how many covers appear per row (2–5), toggle the visibility of title, author, rating, and reading progress on each cover, and set your default shelf.</p>
-      </details>
-      <details>
-        <summary>
-          How do I sort or filter my library?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the filter icon on the Library screen. The <strong>Sort</strong> tab lets you order by recently added, title, author, rating, or date finished. The <strong>Filter</strong> tab lets you narrow by type, genre, rating, year read, or custom tags.</p>
-      </details>
-      <details>
-        <summary>
-          How do I set my default shelf?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the filter icon on the Library screen, go to the <strong>Display</strong> tab, and select your preferred default shelf at the top. Your choice is saved and applied every time you open the app.</p>
-      </details>
-      <details>
-        <summary>
-          What are tags and how do I use them?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tags let you organise books with custom labels — for example #japan, #nonfiction, or #rereads. Open a book, go to the Info tab, and tap the Tags row to add or remove tags. You can search for tags from the main Library search bar, and filter by tag in the Filter tab.</p>
-      </details>
-    </div>
+    <h2>What we do not collect</h2>
+    <ul>
+      <li>We do not collect email addresses or create user accounts.</li>
+      <li>We do not use analytics or tracking SDKs of any kind.</li>
+      <li>We do not sell or share your data with third parties.</li>
+      <li>We do not collect device identifiers, location data, or usage telemetry.</li>
+    </ul>
 
-    <!-- Ratings -->
-    <div class="section-label">Ratings</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How do I rate a book?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the stars on the book detail page to set a rating. Plume. supports half-star ratings — tap once for a full star, tap again on the same star to set a half star. For example, tapping the third star gives you 3 stars; tapping it again gives you 2.5 stars.</p>
-      </details>
-      <details>
-        <summary>
-          Can I filter my library by rating?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Tap the filter icon on the Library screen and go to the <strong>Filter</strong> tab. Tap one or more star values to show only books with those ratings.</p>
-      </details>
-    </div>
+    <h2>Third-party services</h2>
+    <p>Plume uses the following third-party services to provide certain features:</p>
+    <ul>
+      <li><strong>Google Books API</strong> — used to search for book metadata (title, author, cover, synopsis). Queries are sent to our Cloudflare Worker which caches results. No personal data is included in these requests.</li>
+      <li><strong>Apple Books (iTunes Search API)</strong> — used as a supplementary source for book covers and descriptions. Search terms and ISBNs are sent to Apple's public search API. No personal data is included in these requests. Apple's privacy policy applies.</li>
+      <li><strong>Open Library</strong> — used as a fallback source for book covers via ISBN. No personal data is included in these requests.</li>
+      <li><strong>AniList / MangaDex</strong> — used to search for manga metadata. Same approach as Google Books — no personal data included.</li>
+      <li><strong>Apple CloudKit</strong> — used for optional iCloud sync. Your data stays in your personal iCloud account and is accessible only to you.</li>
+      <li><strong>RevenueCat</strong> — used to process the one-time Plume Pro purchase through Apple's App Store. RevenueCat's privacy policy applies to purchase transactions. We receive only confirmation of purchase status.</li>
+    </ul>
 
-    <!-- Highlights -->
-    <div class="section-label">Highlights</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How do I add a highlight?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Open a book and go to the Highlights tab. Tap <strong>+ Add highlight</strong> in the footer to type one manually, scan a page with your camera using OCR, or import from your e-reader.</p>
-      </details>
-      <details>
-        <summary>
-          How do I scan a highlight from a physical book?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">In the Highlights tab, tap + Add highlight then choose <strong>Scan page</strong>. Point your camera at the text, and Plume. will extract it automatically using on-device OCR. You can edit the result before saving.</p>
-      </details>
-      <details>
-        <summary>
-          Can I add a note to a highlight?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Open any highlight to edit it. There's a <strong>Your note</strong> section below the quote where you can write your thoughts. Tap Done to save.</p>
-      </details>
-      <details>
-        <summary>
-          Can I search my highlights?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Tap the search icon in the Highlights tab footer to search within a book's highlights by quote text or note content. To search across your entire library, use the search bar on the main Library screen.</p>
-      </details>
-      <details>
-        <summary>
-          What is the Discover button in Highlights?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Once you have 20 or more highlights for a book, a sparkle icon appears in the Highlights tab footer. Tap it to jump to a random highlight — a way to rediscover something you saved.</p>
-      </details>
-    </div>
+    <h2>Data storage</h2>
+    <p>All your reading data is stored locally on your device. If you enable iCloud sync, a copy is stored in your personal iCloud account — accessible only to you. We have no servers and no access to your data.</p>
 
-    <!-- Importing from e-readers -->
-    <div class="section-label">Importing from e-readers</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How do I export my highlights from Kindle?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Connect your Kindle to your Mac or PC via USB. Open it in Finder or File Explorer and look for the documents folder. Inside you'll find a file called <strong>My Clippings.txt</strong>. Copy it to your iPhone — via AirDrop, email, or Files — then open Plume., go to Profile → Import highlights, choose Kindle, and select the file.</p>
-      </details>
-      <details>
-        <summary>
-          How do I export my highlights from Kobo?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">First, enable the export feature on your Kobo. Connect it to your Mac or PC via USB. On Mac, show hidden files with <strong>Cmd + Shift + .</strong> (period). Find the file at <strong>.kobo/Kobo/Kobo eReader.conf</strong> and open it in a text editor. Before the <code>[General]</code> section at the top, add two lines: <code>[FeatureSettings]</code> on one line and <code>ExportHighlights=true</code> on the next. Save, eject, and restart your Kobo. A new Export highlights option will appear when you press and hold on a book. Export each book individually — files are saved in the Exported Annotations folder at the root of your Kobo. Send the .txt files to your iPhone and import in Plume. via Profile → Import highlights → Kobo.</p>
-      </details>
-      <details>
-        <summary>
-          What happens if a book already exists when I import?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Plume. will detect the match and ask what to do. <strong>Merge</strong> adds the new highlights to the existing book. <strong>Replace</strong> overwrites the existing highlights. <strong>Add as new</strong> creates a separate entry.</p>
-      </details>
-    </div>
+    <h2>Data deletion</h2>
+    <p>You can delete all your Plume data at any time from Profile → App data → Delete all data. This permanently removes all books, highlights, notes, and reading history from your device.</p>
 
-    <!-- Notes -->
-    <div class="section-label">Notes</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          What is the Notes tab on a book?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">The Notes tab lets you write freeform thoughts about a book — things that don't belong on a specific quote. Think of it as a reading journal per book. Tap <strong>+ Add note</strong> in the footer to create an entry. Notes are timestamped and saved automatically.</p>
-      </details>
-      <details>
-        <summary>
-          What's the difference between a highlight note and a book note?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">A highlight note is a reaction tied to a specific quote. A book note is a standalone thought not linked to any passage — for broader reflections, questions, or ideas the book sparked.</p>
-      </details>
-      <details>
-        <summary>
-          Can I search my notes?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Tap the search icon in the Notes tab footer to search within a book's notes.</p>
-      </details>
-    </div>
+    <h2>Children</h2>
+    <p>Plume is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
 
-    <!-- Reflections -->
-    <div class="section-label">Reflections</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          What are Reflections?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Reflections surface a past highlight from your library — a quiet moment to revisit something you found worth saving. When a reflection is ready, a subtle pill appears at the bottom of your Library. Tap it to read.</p>
-      </details>
-      <details>
-        <summary>
-          How often do Reflections appear?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">You can choose the frequency in Profile → Settings → <strong>Reflection frequency</strong>. Options are Daily, Weekly, Bi-weekly, and Monthly. Reflections appear when you open the app after the interval has passed. Changing the frequency resets the timer so a new one can surface on your next app open.</p>
-      </details>
-      <details>
-        <summary>
-          How does Plume. choose which highlight to show?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Plume. favours older highlights you haven't seen recently, so Reflections feel like rediscovery rather than repetition. The same highlight won't appear twice within six months.</p>
-      </details>
-      <details>
-        <summary>
-          Can I turn Reflections off?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Go to Profile → Settings and toggle Reflections off.</p>
-      </details>
-    </div>
+    <h2>Changes to this policy</h2>
+    <p>If we make changes to this privacy policy, we will update the effective date above. Continued use of Plume after changes constitutes acceptance of the updated policy.</p>
 
-    <!-- Stats -->
-    <div class="section-label">Stats</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How are my reading stats calculated?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Stats are based on your reading log — updated each time you record page progress on a book. Books read, pages read, and streaks all come from this log, so keeping your progress updated gives you more accurate stats.</p>
-      </details>
-      <details>
-        <summary>
-          What is a reading streak?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">A streak counts consecutive days where you met your daily page goal. Your current streak and best streak are shown on the Stats page.</p>
-      </details>
-      <details>
-        <summary>
-          How do I set a daily reading goal?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">On the Stats page, tap <strong>Edit</strong> next to Today's goal. You can set your target number of pages per day once for free. Changing it later requires Plume. Pro.</p>
-      </details>
-      <details>
-        <summary>
-          How do I set a yearly book goal?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">On the Stats page, go to the <strong>Year</strong> tab and tap <strong>Set goal</strong>. Enter how many books you want to read this year. The goal pill tracks your progress. Setting a yearly goal is free once — changing it later requires Plume. Pro.</p>
-      </details>
-      <details>
-        <summary>
-          What are the three stats scopes?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">The Stats page has three tabs. <strong>Month</strong> shows your reading activity for the current month — daily goal, reading calendar, genre breakdown, and top reading days. <strong>Year</strong> shows your full-year progress with a 12-month calendar grid and yearly goal tracking. <strong>All time</strong> shows your complete reading history, year-by-year breakdown, milestones, and reading session stats.</p>
-      </details>
-      <details>
-        <summary>
-          What are Milestones?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Milestones appear in the All time tab and highlight your personal records — your longest book, fastest read, the book with the most highlights, and your best reading year.</p>
-      </details>
-      <details>
-        <summary>
-          Why does my page count seem low in stats?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">For manga, chapters are counted as pages in the reading log since Plume. uses a unified progress system. This means manga chapter counts contribute to your pages read total, which may appear lower than expected for heavy manga readers. This is a known limitation.</p>
-      </details>
-    </div>
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy? Reach us at <a href="mailto:featherstudio@proton.me">featherstudio@proton.me</a>.</p>
 
-    <!-- Book timer -->
-    <div class="section-label">Book timer</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          What is the book timer?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">The book timer lets you track how long you spend reading in each session. Start it from the Info tab on any book you're currently reading. The timer runs in the background and shows a floating pill at the bottom of the app while active.</p>
-      </details>
-      <details>
-        <summary>
-          How do I start a reading session?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Open a book on your Reading shelf, go to the Info tab, and tap <strong>Start session</strong>. The timer starts immediately and a floating pill appears at the bottom of the screen.</p>
-      </details>
-      <details>
-        <summary>
-          Can I pause a session?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Tap the pause button on the floating pill, or tap <strong>Pause &amp; Open App</strong> from the Live Activity on your lock screen. The timer freezes until you resume.</p>
-      </details>
-      <details>
-        <summary>
-          How do I stop and save a session?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the stop button on the pill, confirm you want to stop, then enter your current page in the sheet that appears. Tap <strong>Save session</strong> to log it. Your book progress updates automatically.</p>
-      </details>
-      <details>
-        <summary>
-          What is the Live Activity?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">When a session is active, Plume. shows a Live Activity on your lock screen and in the Dynamic Island. It displays the book title, elapsed time, and buttons to pause or stop the session. Tapping <strong>Stop &amp; Open App</strong> brings you back to Plume. to save or discard the session.</p>
-      </details>
-      <details>
-        <summary>
-          Where can I see my past reading sessions?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Open any book and scroll to the <strong>Reading sessions</strong> section in the Info tab. It shows your three most recent sessions with date, duration, and pages read. Tap <strong>See all</strong> to view your full session history for that book.</p>
-      </details>
-      <details>
-        <summary>
-          What happens if I accidentally start a timer?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Tap the stop button on the pill, then tap <strong>Cancel session</strong> in the confirmation. This discards the session without saving anything.</p>
-      </details>
-    </div>
-
-    <!-- Collections -->
-    <div class="section-label">Collections</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          What are Collections?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Collections let you group books together for any reason you like — a yearly reading goal, a genre, a themed pile, or anything else. A book can belong to as many collections as you want, independent of its shelf status.</p>
-      </details>
-      <details>
-        <summary>
-          How do I create a collection?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">From your Library, tap the collections icon next to the filter icon, then tap the <strong>+</strong> button. Give it a name, an optional description, and choose whether to track completion.</p>
-      </details>
-      <details>
-        <summary>
-          How do I add a book to a collection?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Open a collection and tap <strong>+</strong> to either pick from books already in your library or search for a new one. You can also add a book to any collection directly from its own page, in the Collections row under its details.</p>
-      </details>
-      <details>
-        <summary>
-          What does "Track completion" do?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">When enabled, each book in the collection gets its own checkbox and the collection shows a progress bar. Checking a book off only marks it complete within that collection — it won't change your library shelf unless you confirm you'd like to also mark it Finished.</p>
-      </details>
-      <details>
-        <summary>
-          Does marking a book complete in a collection affect my Stats?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Only if you confirm the shelf-sync prompt. Collections track completion independently from your library — your Stats page is driven by your shelves and reading sessions, not by collection checkmarks.</p>
-      </details>
-      <details>
-        <summary>
-          Can I reorder books or collections?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. In Manual order sort, drag the grip handle on any book to reorder it within a collection. Collections themselves can also be dragged into a new order from the main Collections page.</p>
-      </details>
-      <details>
-        <summary>
-          Can I set a custom cover for a collection?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Open the collection, tap the <strong>···</strong> menu, then Edit collection. Tap the cover to choose and crop a photo. You can reset it back to the automatic cover — made from your first few book covers — at any time.</p>
-      </details>
-      <details>
-        <summary>
-          What happens if I remove a book from a collection?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Swipe left on any book in list view to remove it. This only removes it from that collection — the book stays in your library untouched.</p>
-      </details>
-      <details>
-        <summary>
-          What happens if I delete a collection?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Only the collection itself is deleted. Every book inside it stays exactly where it is in your library.</p>
-      </details>
-      <details>
-        <summary>
-          Can I duplicate a collection?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Tap the <strong>···</strong> menu on a collection and choose Duplicate. This creates a fresh copy with the same books, but all completion checkmarks reset — handy for reusing a list like "Reading list" for a new year.</p>
-      </details>
-      <details>
-        <summary>
-          Do Collections sync via iCloud?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes, the same way the rest of your library does. If iCloud sync isn't enabled, Collections are stored only on your device and won't transfer if you reinstall the app or switch devices.</p>
-      </details>
-    </div>
-
-    <!-- Following -->
-    <div class="section-label">Following</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          What is Following?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Following lets you share your reading activity with friends and see what they're reading. You generate a personal code and share it — anyone who enters it can follow your shelves and collections in read-only mode. No accounts, no public profiles, no social feed.</p>
-      </details>
-      <details>
-        <summary>
-          How do I get my sharing code?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Go to Profile → tap your profile card to open the Following page. Tap <strong>Get your code</strong> and sign in with Apple — this is only used to keep your code private and persistent. Your code will appear in the format <strong>PLUME-XXXX</strong>. Copy or share it directly from there.</p>
-      </details>
-      <details>
-        <summary>
-          How do I follow a friend?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">On the Following page, tap the <strong>+</strong> button, enter your friend's PLUME-XXXX code, and tap Find. You'll see a preview of their profile — tap Follow to add them. Their reading activity will appear as a card you can tap into at any time.</p>
-      </details>
-      <details>
-        <summary>
-          What do my followers see?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Only what you choose to share. Go to Following → <strong>What you share</strong> to toggle your Currently reading, Read, and Want to read shelves on or off individually. You can also choose which Collections to share. Everything else — highlights, notes, ratings, reviews — stays private.</p>
-      </details>
-      <details>
-        <summary>
-          Can I give a friend a nickname?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Long-press on a friend's profile page to bring up the nickname sheet. Nicknames are stored locally — your friend won't see it.</p>
-      </details>
-      <details>
-        <summary>
-          How do I stop sharing with someone?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Go to Following → <strong>What you share</strong> → <strong>Revoke code…</strong> This invalidates your current PLUME-XXXX code — anyone following you will lose access immediately. You can generate a new code at any time and share it selectively.</p>
-      </details>
-      <details>
-        <summary>
-          How do I remove someone I'm following?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Open the friend's profile and tap <strong>Remove reader</strong> at the bottom. They won't be notified. You can re-add them later with their code if they still have one active.</p>
-      </details>
-      <details>
-        <summary>
-          Is my reading data sent to Plume's servers?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Only the data you explicitly choose to share is stored on Plume's relay — the shelves and collections you toggled on. It is keyed to your code and only accessible by someone who has that code. No other library data, highlights, or personal information is ever sent.</p>
-      </details>
-    </div>
-
-    <!-- iCloud sync -->
-    <div class="section-label">iCloud sync</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How does iCloud sync work?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-                <p class="answer">When enabled, Plume. syncs your library, highlights, notes, reads, reading log, reading sessions, and collections to your private iCloud container. Your data is only visible to you — Plume. never has access to it. Sync happens automatically when you open the app.</p>
-      </details>
-      <details>
-        <summary>
-          How do I enable iCloud sync?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Go to Profile → Settings and toggle iCloud sync on. Make sure you're signed into iCloud on your device. The first sync may take a moment depending on library size.</p>
-      </details>
-      <details>
-        <summary>
-          Is my data private?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Yes. Everything stays on your device or in your private iCloud container. Plume. has no backend servers and no access to your data. No tracking, no ads, no third-party sharing.</p>
-      </details>
-    </div>
-
-    <!-- Data & backup -->
-    <div class="section-label">Data &amp; backup</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          How do I back up my data?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Go to Profile → App data → Export backup. Plume. creates a JSON file containing your entire library, highlights, and reading history. Save it somewhere safe — Files, iCloud Drive, or email it to yourself.</p>
-      </details>
-      <details>
-        <summary>
-          How do I restore from a backup?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Go to Profile → App data → Import backup and select your backup file. Plume. will restore all your books, highlights, and reading history.</p>
-      </details>
-      <details>
-        <summary>
-          What happens if I delete all data?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Profile → App data → Delete all data permanently removes everything from your device and returns you to onboarding. This cannot be undone. If you have a backup or iCloud sync enabled, you can restore afterwards.</p>
-      </details>
-    </div>
-
-    <!-- Plume Pro -->
-    <div class="section-label">Plume Pro</div>
-    <div class="faq-group">
-      <details>
-        <summary>
-          What does Plume Pro include?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">Pro unlocks unlimited Kindle and Kobo imports, iCloud sync, full stats history across all years and months, daily and yearly goal editing after the first set, full reading session history per book, and unlimited Reflections after the first. It's a one-time purchase — no subscription.</p>
-      </details>
-      <details>
-        <summary>
-          How do I restore a previous purchase?
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p class="answer">If you've previously purchased Plume Pro and reinstalled the app, open the paywall and tap Restore purchase. Your Pro access will be reinstated at no charge.</p>
-      </details>
-    </div>
-
+    <hr class="divider" />
   </main>
 
   <footer>
     Plume. — made with care &nbsp;·&nbsp;
-    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="terms.html">Terms of Service</a>
+    <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+    <a href="support.html">Support</a>
   </footer>
 </body>
 </html>
