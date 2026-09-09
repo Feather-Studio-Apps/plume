@@ -628,6 +628,13 @@
       </details>
       <details>
         <summary>
+          Can I share a collection with someone?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Tap the <strong>···</strong> menu on a collection and choose Share. This exports a CSV of just that collection, which you can send to a friend any way you like — Messages, email, AirDrop. They can import it into their own Plume library. Unlike Following, this is a one-time snapshot to one person, not a live shared feed.</p>
+      </details>
+      <details>
+        <summary>
           Do Collections sync via iCloud?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
@@ -763,7 +770,7 @@
           Which apps can I import from?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Plume supports importing from Reading List, Goodreads, and StoryGraph. Go to Profile → Your library → <strong>Import library</strong> and select your source. You'll need to export a CSV from each app first.</p>
+        <p class="answer">Plume supports importing from Reading List, Goodreads, StoryGraph, and Plume itself. Go to Profile → Your library → <strong>Import library</strong> and select your source. For the first three, you'll need to export a CSV from that app first.</p>
       </details>
       <details>
         <summary>
@@ -788,17 +795,24 @@
       </details>
       <details>
         <summary>
+          How do I import a file exported from Plume?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Choose <strong>Plume</strong> as your source and select the CSV. A Full or Custom export brings in shelves and collections as they were when exported. A collection shared by a friend only brings in the books themselves — no shelf or reading status — added to a new collection in your library, since your reading progress is yours to set.</p>
+      </details>
+      <details>
+        <summary>
           What happens if a book is already in my library?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Plume detects duplicates on the import preview screen. You can choose to add the book anyway or skip it individually for each duplicate found.</p>
+        <p class="answer">Plume detects duplicates on the import preview screen. You can choose to add the book anyway or skip it individually for each duplicate found. When importing a file exported from Plume, a skipped duplicate still joins any collection listed for it — only the extra book record is skipped.</p>
       </details>
       <details>
         <summary>
           Why are some covers missing after import?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Covers are sourced from free, open databases. Most books import with a cover, but some — particularly obscure titles, non-English editions, or older books — may not have one available. You can tap <strong>Refresh metadata</strong> on the book's Info tab to try fetching a cover again, or add one manually in edit mode.</p>
+        <p class="answer">Covers are sourced from free, open databases. Most books import with a cover, but some — particularly obscure titles, non-English editions, or older books — may not have one available. Manga covers are matched automatically only when importing a file exported from Plume, since it's the only format that records which titles are manga. You can tap <strong>Refresh metadata</strong> on the book's Info tab to try fetching a cover again, or add one manually in edit mode.</p>
       </details>
     </div>
 
@@ -814,10 +828,17 @@
       </details>
       <details>
         <summary>
-          What is the difference between the two export formats?
+          What is the difference between the export formats?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer"><strong>Goodreads Compatible</strong> exports in the standard format accepted by Goodreads, StoryGraph, and most book trackers — ideal for migrating your library to another app. <strong>Plume Full Export</strong> includes all Plume fields (genres, language, reading dates, reviews) and is best for archiving or re-importing into Plume.</p>
+        <p class="answer"><strong>Goodreads Compatible</strong> exports in the standard format accepted by Goodreads, StoryGraph, and most book trackers — ideal for migrating your library to another app. <strong>Plume Full Export</strong> includes every Plume field (genres, language, reading dates, reviews, and collections) and is best for archiving or re-importing into Plume. <strong>Custom</strong> lets you choose specific shelves or collections to include, using the same full field set as Plume Full Export.</p>
+      </details>
+      <details>
+        <summary>
+          Can I export just part of my library?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. Choose <strong>Custom</strong> from the export menu, then select any combination of shelves and collections. A book is included if it matches at least one of your selections. Custom exports use the Plume format, so they can be imported back into Plume later.</p>
       </details>
       <details>
         <summary>
