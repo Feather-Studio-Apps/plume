@@ -309,14 +309,21 @@
           How do I rate a book?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Tap the stars on the book detail page to set a rating. Plume. supports half-star ratings — tap once for a full star, tap again on the same star to set a half star. For example, tapping the third star gives you 3 stars; tapping it again gives you 2.5 stars.</p>
+        <p class="answer">Tap or drag across the stars on the book detail page to set a rating. Ratings go in quarter-star steps — drag your finger slowly and you'll feel a gentle tick at each step, with the exact rating (for example 3.75) shown underneath the stars. You can also rate from the Edit screen or when adding a finished book. To clear a rating, tap your current rating again, or drag past the left edge of the first star. With VoiceOver, swipe up or down on the stars to adjust by a quarter.</p>
       </details>
       <details>
         <summary>
           Can I filter my library by rating?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Yes. Tap the filter icon on the Library screen and go to the <strong>Filter</strong> tab. Tap one or more star values to show only books with those ratings.</p>
+        <p class="answer">Yes. Tap the filter icon on the Library screen and go to the <strong>Filter</strong> tab. Each star value covers its whole range — <strong>3★</strong> shows every book rated from 3 up to 3.75 — so half and quarter ratings are always included. Select several values to combine them.</p>
+      </details>
+      <details>
+        <summary>
+          What happens to quarter-star ratings when I import or export?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Plume.'s own CSV export keeps your ratings exactly, so moving between devices or sharing with another Plume. reader loses nothing. Goodreads only supports whole stars, so the Goodreads export rounds each rating to the nearest whole star (3.75 becomes 4). When importing from StoryGraph, quarter-star ratings come across exactly as they were.</p>
       </details>
     </div>
 
@@ -460,7 +467,7 @@
           What is a reading streak?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">A streak counts consecutive days where you met your daily page goal. Your current streak and best streak are shown on the Stats page.</p>
+        <p class="answer">A streak counts consecutive days where you met your daily goal — pages for books, minutes for audiobooks. Each format keeps its own streak. Your current streak and best streak are shown on the Stats page.</p>
       </details>
       <details>
         <summary>
@@ -481,7 +488,7 @@
           What are the three stats scopes?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">The Stats page has three tabs. <strong>Month</strong> shows your reading activity for the current month — daily goal, reading calendar, genre breakdown, and top reading days. <strong>Year</strong> shows your full-year progress with a 12-month calendar grid and yearly goal tracking. <strong>All time</strong> shows your complete reading history, year-by-year breakdown, milestones, and reading session stats.</p>
+        <p class="answer">The Stats page has three tabs. <strong>Month</strong> shows your reading activity for the current month — daily goal, reading calendar, genre breakdown, and top reading days. <strong>Year</strong> shows your full-year progress with a 12-month calendar grid and yearly goal tracking. <strong>All time</strong> shows your complete reading history, year-by-year breakdown, milestones, and reading session stats. Month and Year also show a row of covers for the books you finished in that period — tap any cover to open the book. Each scope has separate <strong>Books</strong> and <strong>Audiobooks</strong> views.</p>
       </details>
       <details>
         <summary>
@@ -496,6 +503,74 @@
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <p class="answer">For manga, chapters are counted as pages in the reading log since Plume. uses a unified progress system. This means manga chapter counts contribute to your pages read total, which may appear lower than expected for heavy manga readers. This is a known limitation.</p>
+      </details>
+      <details>
+        <summary>
+          Can I see my reading calendar with book covers?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. In the <strong>Month</strong> tab, tap <strong>See your month in covers</strong> under the reading calendar. Each day shows the cover of the book you read most, with any other books that day stacked just behind it. Tap a day to see every book and how much you read. Audiobooks have their own listening calendar, opened the same way from the Audiobooks view. Browsing previous months requires Plume. Pro.</p>
+      </details>
+      <details>
+        <summary>
+          Why don't my audiobooks count in my Books stats?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Books and Audiobooks keep fully separate stats, so each view reflects one format. Finished audiobooks, listening sessions, and highlights on audiobooks count in the <strong>Audiobooks</strong> view only — including towards your yearly audiobook goal rather than your yearly book goal. Nothing is lost; switch to the Audiobooks view to see them.</p>
+      </details>
+    </div>
+
+    <!-- Audiobooks -->
+    <div class="section-label">Audiobooks</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How do I add an audiobook?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Add the book as usual, then turn on the <strong>Audiobook</strong> toggle on the screen where you choose a shelf. You can also switch an existing book to an audiobook from its Edit screen. Once it's on, you can enter the duration and narrator. Switching back to text keeps your page details, so nothing is lost either way.</p>
+      </details>
+      <details>
+        <summary>
+          How do I track my listening progress?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">For audiobooks, the Info tab shows <strong>Duration</strong>, <strong>Narrator</strong>, and your <strong>Position</strong> instead of pages. Tap Position to update how far you've listened. On the book detail page, shelves read as <strong>Want to listen</strong>, <strong>Listening</strong>, and <strong>Finished</strong>.</p>
+      </details>
+      <details>
+        <summary>
+          Can I time my listening sessions?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. The book timer works for audiobooks exactly as it does for books, including the Live Activity on your lock screen. When you stop the timer, Plume. calculates your new position from the time you listened — you can adjust it before saving if it's slightly off. Adding a listening session manually requires Plume. Pro.</p>
+      </details>
+      <details>
+        <summary>
+          Can I set listening goals?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. In the Audiobooks view of the Stats page, you can set a daily listening goal in minutes and a yearly audiobook goal. Turning the daily goal on or off is always free. Like reading goals, each can be set once for free — changing them later requires Plume. Pro. Listening goals and streaks are tracked separately from your reading ones.</p>
+      </details>
+      <details>
+        <summary>
+          Can I hide audiobooks from my stats?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes. In Profile → Settings, turn on <strong>Hide Audiobooks in Stats</strong> to remove the Books / Audiobooks switch from the Stats page. Your audiobooks stay in your library and keep being tracked — they're just not shown in Stats. This setting applies to the device you change it on.</p>
+      </details>
+      <details>
+        <summary>
+          Why doesn't Plume. fill in the narrator and duration automatically?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">The free book sources Plume. uses don't reliably include audiobook details like narrator or running time, so these are entered by hand for now. Covers, authors, and other book details are still fetched as usual.</p>
+      </details>
+      <details>
+        <summary>
+          Can audiobooks go in collections, and do they export?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes to both. Audiobooks and books mix freely in any collection. The Plume. CSV export includes each book's format, duration, narrator, and listening position, so everything comes back exactly when you import it. The Goodreads export includes your audiobooks, but not the audio-specific details, since Goodreads has no equivalent fields.</p>
       </details>
     </div>
 
@@ -850,6 +925,53 @@
     </div>
 
     <!-- iCloud sync -->
+    <!-- Appearance -->
+    <div class="section-label">Appearance</div>
+    <div class="faq-group">
+      <details>
+        <summary>
+          How do I change the app's colours?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Go to Profile and tap <strong>Theme</strong>, the first row in Settings. Choose <strong>Light</strong>, <strong>Dark</strong>, or <strong>Custom</strong>. Plume. keeps the theme you pick rather than following your iPhone's light or dark mode setting, so it always looks the way you chose.</p>
+      </details>
+      <details>
+        <summary>
+          How do I create a custom theme?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Choose <strong>Custom</strong> and tap any colour in the list to change it. You can pick from the colour spectrum, type a hex code, or tap a quick preset. Each colour shows a small preview of the exact part of the app it affects — like buttons, text, or borders — and the preview card at the top shows everything together. When you're happy, tap <strong>Save</strong>.</p>
+      </details>
+      <details>
+        <summary>
+          Is custom theming free?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Light and Dark are free for everyone. You can also explore Custom freely — change every colour and see the live preview — but saving a custom theme requires Plume. Pro.</p>
+      </details>
+      <details>
+        <summary>
+          What are theme presets?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Plume. includes four ready-made palettes to start from: <strong>Sage</strong>, <strong>Moss</strong>, <strong>Ocean</strong>, and <strong>Deep</strong>. You can also save your own with <strong>Save as…</strong> and give it a name — there's no limit. Tapping a preset loads its colours so you can preview or tweak them; nothing changes until you tap Save. To remove one of your presets, tap the small × on it. To rename one, load it, use Save as… with the new name, then delete the old one.</p>
+      </details>
+      <details>
+        <summary>
+          Does my theme sync to my other devices?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">Yes, with iCloud sync turned on. Your theme and your saved presets follow you to your other devices, and a theme changed on one device updates on the others without needing to restart the app.</p>
+      </details>
+      <details>
+        <summary>
+          Why don't some parts of the app change colour?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p class="answer">A few things keep fixed colours on purpose. The lock screen widget and Live Activity use Apple's own system, separate from the app. The floating timer pill and delete buttons stay the same so they're always readable, whatever colours you choose. Placeholder covers and some stats charts keep their variety of colours so they stay easy to tell apart.</p>
+      </details>
+    </div>
+
     <div class="section-label">iCloud sync</div>
     <div class="faq-group">
       <details>
@@ -909,7 +1031,7 @@
           What does Plume Pro include?
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p class="answer">Pro unlocks unlimited Kindle and Kobo imports, iCloud sync, full stats history across all years and months, daily and yearly goal editing after the first set, full reading session history per book, manual reading session logging, highlight and note exports, and unlimited Reflections after the first. It's a one-time purchase — no subscription.</p>
+        <p class="answer">Pro unlocks unlimited Kindle and Kobo imports, iCloud sync, full stats history across all years and months (including the cover calendar), daily and yearly goal editing after the first set, full reading and listening session history per book, manual session logging, highlight and note exports, unlimited Reflections after the first, and saving your own custom themes. It's a one-time purchase — no subscription.</p>
       </details>
       <details>
         <summary>
